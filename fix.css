@@ -1,0 +1,71 @@
+/* Possible universal vs body vs html discussion. */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #0C0336;
+  color: #fff;
+  /* It looks like the entire body is still being pushed down from the top of the page. why?
+  Inspect margin on h1. Point out, margins can (and often do) spill out of containers. In devTools
+  illustrate how we could remove margin and use padding here instead to keep content contained. This
+  is just for demonstration (compare/contrast padding vs margin). Not gonna keep this change. */
+  margin: 0 0;
+  font-family: "Trebuchet MS";
+}
+
+h1 {
+  font-family: "Helvetica";
+  font-size: 50px;
+  background-image: url("./images/neon-jelly.jpg");
+  background-position: left 35% top;
+  /* Now our header is just hanging out to the left, which doesn't look nice. We could just center vertical-align
+  everything with the text-align property. However, center align is boring and overdone. As it stands
+  now, we have a very strong left alignment so let's try to get our heading to line up with the another
+  text... */
+  width: 50%;
+  margin: 50px auto;
+
+  /* I would like to see more of the background image so let's increase the padding. Now our title
+  has different dimensions than our gallery! -> border-box discussion. */
+  padding: 50px;
+}
+
+/* Now we have another problem. Use DevTools to make body background bright yellow. Notice gap between
+figcaption and associated image? In graphic design world we would say that this design violates the
+princple of proximity. Let's fix. Why do we have this gap in the first place -> inline elements have
+gap at bottom. Discuss two fixes (display: block or vertical-align: middle) on img.
+
+Now (in accordance with the principle of proximity) let's create some distance between our figcaption
+and the unrelated images. Ask how? -> update margin property in figure tag.
+Good time to discuss collapsing margins. If we give img a margin, why don't verticle margins collapse?
+inline vs block elements (slightly ahead of schedule so be brief and say "learn more next week").
+*/
+figure {
+  /*We want to center our gallery. Why doesn't apply margin: auto to the section tag work? -> Explain.
+  Can now remove margin-left.  */
+  /* margin-left: 0; */
+  margin: 50px auto;
+}
+
+.photo {
+  /* Discuss percentage units. */
+  width: 50%;
+}
+
+img {
+  width: 100%;
+  /* height: 500px; */
+  vertical-align: middle; /* See comments above */
+}
+
+figcaption {
+  background-color: #0D337A;
+  font-size: 20px;
+  /* Let's create some breathing room around our figcapture text */
+  padding: 25px;
+}
+
+a {
+  color: #fff;
+}
