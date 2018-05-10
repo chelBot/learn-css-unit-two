@@ -7,6 +7,8 @@ body {
 
 h1 {
   font-family: "Helvetica";
+  background-image: url("./images/neon-jelly.jpg");
+  background-position: left 35% top;
 }
 
 img {
