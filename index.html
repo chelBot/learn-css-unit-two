@@ -8,7 +8,7 @@
   </head>
   <!--Notice that default margin around the body? Let's override the default user agent style sheet  -->
   <body>
-    <!--Why did we creat this more heavily nested structure? -> semantics  -->
+    <!--Why did we create this more heavily nested structure? -> semantics  -->
     <section>
       <!--If we compare this title to the title in our last gallery we notice the font-size is smaller
           Why? -> Open DevTools -> user agent style sheet (compare to anchors) -> webkit -->
@@ -23,7 +23,7 @@
          width to exact size of image (1000px)? That does the trick but brittle. What if client
          wants to change image width? Broken again. Let's solve this in a more flexible way...
 
-         We can set imaage width to 100% and then it will take up
+         We can set image width to 100% and then it will take up
          the entire width of it's container like the figcaption is doing. The aspect ratio is destroyed.
          Remove height property. That looks ok but these images are a too big now. Set width of
          container. -->

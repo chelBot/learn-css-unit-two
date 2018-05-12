@@ -28,29 +28,16 @@ h1 {
 
   /* I would like to see more of the background image so let's increase the padding. Now our title
   has different dimensions than our gallery! -> border-box discussion. */
-  padding: 50px;
-}
-
-/* Now we have another problem. Use DevTools to make body background bright yellow. Notice gap between
-figcaption and associated image? In graphic design world we would say that this design violates the
-princple of proximity. Let's fix. Why do we have this gap in the first place -> inline elements have
-gap at bottom. Discuss two fixes (display: block or vertical-align: middle) on img.
-
-Now (in accordance with the principle of proximity) let's create some distance between our figcaption
-and the unrelated images. Ask how? -> update margin property in figure tag.
-Good time to discuss collapsing margins. If we give img a margin, why don't verticle margins collapse?
-inline vs block elements (slightly ahead of schedule so be brief and say "learn more next week").
-*/
-figure {
-  /*We want to center our gallery. Why doesn't apply margin: auto to the section tag work? -> Explain.
-  Can now remove margin-left.  */
-  /* margin-left: 0; */
-  margin: 50px auto;
+  padding: 50px 25px;
 }
 
 .photo {
   /* Discuss percentage units. */
   width: 50%;
+  /* We want to center our gallery. Why doesn't apply margin: auto to the section tag work? -> Explain.
+  Can now remove margin-left.  */
+  /* margin-left: 0; */
+    margin: 50px auto;
 }
 
 img {
@@ -58,6 +45,17 @@ img {
   /* height: 500px; */
   vertical-align: middle; /* See comments above */
 }
+
+/* Now we have another problem. Use DevTools to make body background bright yellow. Notice gap between
+figcaption and associated image? In graphic design world we would say that this design violates the
+principle of proximity. Let's fix. Why do we have this gap in the first place -> inline elements have
+gap at bottom. Discuss two fixes (display: block or vertical-align: middle) on img.
+
+Now (in accordance with the principle of proximity) let's create some distance between our figcaption
+and the unrelated images. Ask how? -> update margin property in .photo selector.
+Good time to discuss collapsing margins. If we give img a margin, why don't verticle margins collapse?
+inline vs block elements (slightly ahead of schedule so be brief and say "learn more next week").
+*/
 
 figcaption {
   background-color: #0D337A;
