@@ -12,10 +12,12 @@ h1 {
 }
 
 .photo {
+  /* This was added in the previous webinar. */
   width: 50%;
 }
 
 img {
+  /* This was added in the previous webinar. */
   width: 100%;
 }
 
