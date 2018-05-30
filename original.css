@@ -11,9 +11,14 @@ h1 {
   background-position: left 35% top;
 }
 
+.photo {
+  /* This was added in the previous webinar. */
+  width: 50%;
+}
+
 img {
-  width: 1000px;
-  height: 500px;
+  /* This was added in the previous webinar. */
+  width: 100%;
 }
 
 figcaption {
